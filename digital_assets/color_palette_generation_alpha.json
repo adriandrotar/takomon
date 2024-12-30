@@ -1,0 +1,46 @@
+{
+    "background": {
+      "pastel_pink": "#F8C8D8",
+      "pastel_blue": "#C8D8F8",
+      "pastel_lavender": "#D8C8F8",
+      "pastel_mint": "#C8F8D8",
+      "pastel_yellow": "#F8F8C8"
+    },
+    "body": {
+      "egg_stage": {
+        "egg_beige": "#E3D8C9",
+        "egg_cream": "#F0E3C1"
+      },
+      "baby_stage": {
+        "baby_coral": "#FF6F61",
+        "baby_aqua": "#5BC0BE",
+        "baby_lavender": "#B79BFC"
+      },
+      "grown_stage": {
+        "grown_green": "#3FBF97",
+        "grown_purple": "#9B4DFF",
+        "grown_teal": "#0F797A",
+        "grown_navy": "#1D3F68"
+      }
+    },
+    "tentacles": {
+      "tentacle_coral": "#FF9A8B",
+      "tentacle_turquoise": "#64C8C4",
+      "tentacle_pink": "#F59AC6",
+      "tentacle_green": "#3D9D57",
+      "tentacle_yellow": "#F8E18C"
+    },
+    "accent": {
+      "eye_white": "#FFFFFF",
+      "eye_black": "#1C1C1C",
+      "eye_glowing_blue": "#59BFFF",
+      "eye_glowing_purple": "#D27DFF",
+      "golden_glow": "#F8D500",
+      "bubble_yellow": "#FFF100"
+    },
+    "shadows": {
+      "shadow_purple": "#5A4C9C",
+      "shadow_teal": "#2B5957",
+      "shadow_blue": "#2D3F6B"
+    }
+  }
