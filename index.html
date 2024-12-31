@@ -68,6 +68,11 @@
       margin-bottom: 40px;
     }
 
+    .logo {
+      max-width: 150px;  /* Logo size */
+      margin-bottom: 20px;
+    }
+
     h1 {
       font-size: 3rem;
       font-weight: 700;
@@ -142,19 +147,26 @@
       gap: 20px;
     }
 
-    .links a {
-      font-size: 1.1rem;
-      padding: 10px 20px;
-      border: 1px solid #9b59b6; /* Purple border for links */
-      border-radius: 5px;
-      text-align: center;
-      transition: background-color 0.3s, color 0.3s;
-    }
+  /* General Styles for Links */
+  .links a {
+    font-size: 1.1rem;
+    padding: 12px 25px;  /* Increased padding for a button-like feel */
+    border: none;  /* Removed border to make it rounder */
+    border-radius: 30px;  /* Rounded edges */
+    background-color: #9b59b6;  /* Purple background for links */
+    color: #1e1e1e;  /* White text color */
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;  /* Smooth transitions */
+    display: inline-block;  /* Keeps the link look */
+    font-weight: 500;  /* Slightly bolder text for modern feel */
+  }
 
-    .links a:hover {
-      background-color: #9b59b6; /* Purple background on hover */
-      color: #121212;
-    }
+  /* Hover effect */
+  .links a:hover {
+    background-color: #ba6eff;  /* Lighter purple on hover */
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+    color: #121212;  /* Darker text color on hover */
+  }
 
     footer {
       margin-top: 50px;
@@ -199,6 +211,7 @@
 </head>
 <body>
   <header>
+    <img src="/icons/icon-512x512.png" alt="Takomon Logo" class="logo">
     <h1>Welcome to Takomon</h1>
     <p class="intro-text">A dynamic NFT collection on the Cardano blockchain, featuring handmade pixel art with unique, 1-of-1 collectibles that evolve through three stages - egg, baby, and grown form.</p>
   </header>
