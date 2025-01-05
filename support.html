@@ -95,11 +95,32 @@
       border-radius: 20px;
       cursor: pointer;
       transition: background-color 0.3s, transform 0.3s;
+      position: relative;
     }
 
     .wallet-card button:hover {
       background-color: #ba6eff;
       transform: scale(1.1);
+    }
+
+    .wallet-card button .copy-notice {
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #282828;
+      color: #ffffff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .wallet-card button.show-notice .copy-notice {
+      opacity: 1;
+      visibility: visible;
     }
 
     .qr-code {
@@ -131,20 +152,20 @@
       color: #121212;
     }
 
-      footer {
-        margin-top: 50px;
-        font-size: 0.9rem;
-        color: #757575;
-        text-align: center;
-      }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #757575;
+      text-align: center;
+    }
 
-      footer a {
-        color: #9b59b6; /* Purple footer links */
-      }
+    footer a {
+      color: #9b59b6; /* Purple footer links */
+    }
 
-      footer a:hover {
-        color: #ba6eff; /* Lighter purple on hover */
-      }
+    footer a:hover {
+      color: #ba6eff; /* Lighter purple on hover */
+    }
   </style>
 </head>
 <body>
@@ -158,7 +179,9 @@
     <h2>Donate with Cardano</h2>
     <p>Wallet Address:</p>
     <p class="wallet-address">addr1qyhywcwcs33vefzxs5at26jw5ztlcwej0rqvk56eqqmxzjxvg4t06d92wwa8mpph3kdncsaac429lnpkz4p6ghryhnesjrxc3k</p>
-    <button onclick="copyToClipboard()">Copy Address</button>
+    <button onclick="copyToClipboard(this)">Copy Address
+      <span class="copy-notice">Copied!</span>
+    </button>
     <div class="qr-code">
         <img src="/socials/wallet_qr.png" alt="Wallet QR Code">
     </div>
@@ -175,11 +198,12 @@
   </footer>
 
   <script>
-    function copyToClipboard() {
-        const walletAddress = document.querySelector('.wallet-address').textContent;
-        navigator.clipboard.writeText(walletAddress).then(() => {
-            alert('Wallet address copied to clipboard!');
-        });
+    function copyToClipboard(button) {
+      const walletAddress = document.querySelector('.wallet-address').textContent;
+      navigator.clipboard.writeText(walletAddress).then(() => {
+        button.classList.add('show-notice');
+        setTimeout(() => button.classList.remove('show-notice'), 2000);
+      });
     }
   </script>
 </body>
